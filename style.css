@@ -133,10 +133,35 @@ input[type="text"] {
     margin: 0 5px 5px 0;
 }
 
-@media(max-wdith: 800px) {}
-@media(max-wdith: 700px) {}
-@media(max-wdith: 500px) {
+/* Media Queries */
+@media(max-width: 800px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media(max-width: 500px) {
     input[type="text"] {
         width: 100%;
+    }
+
+    .meals {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .meal {
+        height: 300px;
+        width: 300px;
     }
 }
